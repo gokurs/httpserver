@@ -2,16 +2,13 @@ package main
 
 import (
 	"fmt"
-	"sync"
 	"time"
 )
 
-var wg sync.WaitGroup
-
 func main() {
 	c := make(chan int)
-	go do(c, 1)
-	go do(c, 3)
+	go do(c, 10)
+	go do(c, 6)
 	fmt.Println(<-c)
 	fmt.Println("erster Wert erhalten")
 	fmt.Println(<-c)
