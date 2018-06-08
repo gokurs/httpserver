@@ -5,7 +5,7 @@ import "fmt"
 type user struct {
 	Vorname  string
 	Nachname string
-	Wohort   string
+	Wohnort  string
 	Alter    int
 }
 
